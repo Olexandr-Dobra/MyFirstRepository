@@ -1,0 +1,44 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Rectangle myRectangle = new Rectangle(12,9,7,4);
+    
+    }
+    public class Rectangle  
+    {
+        
+        int rightBottomPoint;
+        int leftBottomPoint;
+        int rightTopPoint;
+        int leftTopPoint;
+        public Rectangle(int x1, int x2,int y1,int y2)
+        {
+            this.rightBottomPoint=x1;
+            this.leftBottomPoint=x2;
+            this.rightTopPoint = y1;
+            this.leftTopPoint = y2;
+            GetDistance();
+
+        }
+        void GetDistance()
+        {
+           
+            Console.WriteLine(Perimetr((leftBottomPoint-leftTopPoint),(rightBottomPoint-rightTopPoint)));
+            Console.WriteLine(Square((leftBottomPoint-leftTopPoint),(rightBottomPoint-rightTopPoint)));
+            
+        }
+     
+        
+        double Perimetr (double a, double b)
+        {
+            return (a*2+b*2);
+        }
+        double Square (double a, double b)
+        {
+            return a*b;
+        }        
+    }
+}
